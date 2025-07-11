@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>European Travel Weather</h1>
+                <p>Plan your perfect trip. Get a 7-day weather forecast for major European cities to help you pack and prepare.</p>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <div class="controls-card">
+                <form id="weatherForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="citySelect">Select a City</label>
+                            <select id="citySelect" required>
+                                <option value="">Choose a city...</option>
+                            </select>
+                        </div>
+                        <div class="divider">or</div>
+                        <div class="form-group">
+                            <label for="customLat">Enter Custom Coordinates</label>
+                            <div class="coordinate-inputs">
+                                <input type="number" id="customLat" placeholder="Latitude" step="0.0001" min="-90" max="90">
+                                <input type="number" id="customLon" placeholder="Longitude" step="0.0001" min="-180" max="180">
+                            </div>
+                        </div>
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                             <button type="submit" class="submit-button">Get Forecast</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="results-container">
+            </div>
+        </main>
+    </div>
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
